@@ -1,0 +1,73 @@
+sl:
+  refinery:
+    plugins:
+      signups:
+        title: Signups
+    signups:
+      signups:
+        new:
+          header_message: "Ups prišlo je do majhnega problema"
+          message: "Prosimo odpravite sledeče napake:"
+          send: Pošlji sporočilo
+          privacy_policy: "Cenimo vašo zasebnost"
+      admin:
+        signups:
+          signup:
+            said: pravi
+            move_signup_to_closed: Premakni povpraševanje v zaprto
+            move_signup_to_open: Premakni povpraševanje v odprto
+            read_signup: Preberi povpraševanje
+            remove_signup: "Ali ste prepričani da želite odstraniti povpraševanje od '%{name}'?"
+            title: Signups
+          toggle_status:
+            closed: "Povpraševanje '%{signup}' je zaprto"
+            reopened: "Povpraševanje '%{signup}' je ponovno odprto"
+          index:
+            no_signups: Trenutno še ni nobenega povpraševanja.
+          submenu:
+            update_notified: Uredi prejemnike obvestila
+            edit_confirmation_email: Uredni potrditveni email
+          show:
+            details: Podrobnosti
+            click_to_email: Pošlji email sporočilo
+            status: Status
+            open: Odprto
+            closed: Zaprto
+            age: Starost
+            actions: Možnosti
+            back_to_all_signups: Nazaj na vsa povpraševanja
+            signup: Signup
+        settings:
+          update:
+            updated: "'%{setting}' je bila uspešno posodobljena."
+          notification_recipients_form:
+            settings_value_name: Pošlji obvestilo na
+            explanation: "Vedno ko vas nekdo kontaktira na vaši spletni strani, vam Refinery pošlje email obvestilo o novem povpraševanju."
+            hint: "V zgornje polje vnesite email naslov. Želite da obvestila prejme več oseb? Vnesite več email naslovov ločenih z vejicami."
+            example: "Primer: jaz@domena.com, prijatelj@msn.com, sodelavec@work.com"
+          confirmation_email_form:
+            to: Za
+            from: Od
+            subject: Zadeva
+            click_to_edit_subject: Uredi zadevo
+            explanation: "Vedno ko vas nekdo kontaktira na vaši spletni strani mu Refinery pošlje email obvestilo o prejetem povpraševanju."
+            below_edit_email_sent: Spodaj lahko uredite vsebino email sporočila.
+            the_customer_making_signup: Stranka, ki je poslala povpraševanje
+            message: Sporočilo
+            note: "Opomba: vstavite tekst %name% kjer želite, da se pojavi ime stranke v email sporočilu."
+          subject_form:
+            subject_value_name: Zadeva
+  activerecord:
+    models:
+      signup: Signup
+    attributes:
+      signup:
+        name: Name
+        email: Email address
+        contact_number: Contact number
+        language_instruction: Language instruction
+        inquiry: Inquiry
+        translation: Translation
+        coaching: Coaching
+        consultancy: Consultancy
+        question: Question

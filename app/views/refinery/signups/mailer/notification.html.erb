@@ -1,0 +1,23 @@
+<%= t('.greeting') %>,<br/>
+<br/>
+<%= t('.you_recieved_new_signup') %><br/>
+<br/>
+<%= t('.signup_starts') %><br/>
+<br/>
+<%= t('.name', :default => t('activerecord.attributes.signup.name')) %>: <%= @signup.name %><br/>
+<%= t('.email', :default => t('activerecord.attributes.signup.email')) %>: <%= @signup.email %><br/>
+<%= t('.contact_number', :default => t('activerecord.attributes.signup.contact_number')) %>: <%= @signup.contact_number %><br/>
+<%= t('.language_instruction', :default => t('activerecord.attributes.signup.language_instruction')) %>: <%= @signup.language_instruction %><br/>
+<%= t('.inquiry', :default => t('activerecord.attributes.signup.inquiry')) %>: <%= @signup.inquiry %><br/>
+<%= t('.translation', :default => t('activerecord.attributes.signup.translation')) %>: <%= @signup.translation %><br/>
+<%= t('.coaching', :default => t('activerecord.attributes.signup.coaching')) %>: <%= @signup.coaching %><br/>
+<%= t('.consultancy', :default => t('activerecord.attributes.signup.consultancy')) %>: <%= @signup.consultancy %><br/>
+<%= t('.question', :default => t('activerecord.attributes.signup.question')) %>: 
+<%= @signup.question %>
+<br/>
+<%= t('.signup_ends') %><br/>
+<br/>
+<%= t('.closing_line') %>,<br/>
+<%= Refinery::Core.site_name %><br/>
+<br/>
+<%= t('.ps_html') %>

@@ -1,0 +1,1 @@
+<%= simple_format(strip_tags(Refinery::Signups::Setting.confirmation_body.gsub("%name%", @signup.name))) %>

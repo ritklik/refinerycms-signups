@@ -1,0 +1,111 @@
+
+		
+
+
+  <div id="wrapper"  >
+	<div class="container">
+		<h1>SIGN UP</h1>
+		<% content_for :body do %>
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="contact-body">
+                    <h3 class="h3-body-title">Ask. Learn.</h3>
+					<p class="signup-p">As the second most spoken language in the world, learning Spanish opens even more opportunities for your as a BPO and Call Center Professional.</p>
+					<p class="signup-p">Source Leader International's language programs are task-based to ensure thorough proficiency needed for a fast-paced business environment, headed by certified and expert language trainers.</p>
+					<p class="signup-p">Our programs follow the European Guidelines for Language Learning, set in the Common European Framework of References for Languages based on Communicative Language Training.</p>
+					<p class="signup-p">If you have studied Spanish before, you will be asked to take an assessment test to confirm  your proficiency level before the start of the program.</p>
+					<p class="signup-p">Fill out the form to inquire more about Source Leader International, register for our training programs, or sign up for our services. You will hear back from us no later than two business days.</p>
+					
+  <div class='signups'>
+    <%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) %>
+
+    <%= form_for [refinery, :signups, @signup], :html => {:class => 'form-wrapper'} do |f| %>
+      <%= render '/refinery/admin/error_messages',
+                 :object => @signup,
+                 :include_object_name => false  %>
+
+					<div class="form-group">
+	                    <div class="row">
+	                        <div class="col-xs-7">
+	                            <%= f.required_label :name %>
+	                            <input type="text" id="signup_name" name="signup[name]" class="form-control" data-errmsg="Please include your full name" minlength="2" placeholder="Your Full Name" required/>
+	                        </div>
+	                    </div>
+	                </div>
+	
+					<div class="form-group">
+	                    <div class="row">
+	                        <div class="col-xs-7">
+	                            <%= f.required_label :email %>
+	                            <input type="text" id="signup_email" name="signup[email]" class="form-control" data-errmsg="Please include your e-mail address" minlength="2" placeholder="Your E-mail address" required/>
+	                        </div>
+	                    </div>
+	                </div>
+					<div class="form-group">
+	                    <div class="row">
+	                        <div class="col-xs-7">
+	                            <%= f.required_label :contact_number %>
+	                            <input type="text" id="signup_contact_number" name="signup[contact_number]" class="form-control" data-errmsg="Please include your contact number" minlength="2" placeholder="Your Contact Number" required/>
+	                        </div>
+	                    </div>
+	                </div>
+	
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-12">
+								<label style="width: 200px;">How may we help you?</label>
+							</div>
+						</div>
+						<div class="row">
+                        <div class="col-sm-12">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="hidden" value="0" name="signup[language_instruction]"><input type="checkbox" value="1" name="signup[language_instruction]" id="signup_language_instruction">Language Instruction
+
+                                </label>
+								<label>
+                                    <input type="hidden" value="0" name="signup[inquiry]"><input type="checkbox" value="1" name="signup[inquiry]" id="signup_inquiry">Inquiry
+
+                                </label>
+								<label>
+                                    <input type="hidden" value="0" name="signup[translation]"><input type="checkbox" value="1" name="signup[translation]" id="signup_translation">Translation
+
+                                </label>
+								<label>
+                                    <input type="hidden" value="0" name="signup[coaching]"><input type="checkbox" value="1" name="signup[coaching]" id="signup_coaching">Coaching
+
+                                </label>
+								<label>
+                                    <input type="hidden" value="0" name="signup[consultancy]"><input type="checkbox" value="1" name="signup[consultancy]" id="signup_consultancy">Consultancy
+
+                                </label>
+
+                            </div>
+                        </div>
+						</div>
+                    </div>
+	
+					<div class="form-group">
+	                    <div class="row">
+	                        <div class="col-xs-8">
+	                            <%= f.required_label :question %>
+	                            <textarea id="signup_question" name="signup[question]" class="form-control" data-errmsg="Please include your question" placeholder="Your Question" rows="3" required></textarea>
+	                        </div>
+	                    </div>
+	                </div>
+	
+
+
+
+      <div class='actions'>
+        <%= f.submit t('.send') %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%= render '/refinery/content_page', :hide_sections => :body_content_title %>
+</div>
+</div>
+</div>	
+</div>
+</div>

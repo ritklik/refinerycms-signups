@@ -1,0 +1,84 @@
+cs:
+  refinery:
+    plugins:
+      signups:
+        title: Signups
+        description: Poskytuje kontaktní formulář a zaznamenáva signups
+    signups:
+      signups:
+        new:
+          send: Odeslat zprávu
+          privacy_policy: Chráníme vaše soukromí
+      admin:
+        signups:
+          delete: Trvale odstranit signup
+          signup:
+            read_signup: Přečíst signup
+            said: řekl
+            mark_as_spam: Označit jako spam
+            mark_as_ham: Označit jako přečtené
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upravit seznam notifikovaných
+            edit_confirmation_email: Upravit potvrzovací e-mail
+          index:
+            no_signups: Zatím jste neobdrželi žádné signups.
+          spam:
+            no_spam: Hurá! Nemáte žádný spam.
+          show:
+            details: Podrobnosti
+            age: Věk
+            actions: Akce
+            back_to_all_signups: Zpět na všechny signups
+            spam: Spam
+            spam_yes: 'ano'
+            signup: Signup
+            to: Komu
+            from: Od
+            click_to_email: Klikněte pro odeslání této adresy e-mailem
+            phone: Telefon
+            date: Datum
+            message: Zpráva
+        settings:
+          notification_recipients_form:
+            settings_value_name: Zaslat upozornění pro
+            explanation: Pokaždé, když Vás někdo kontaktuje přes vaše webové stránky, Refinery odešle e-mail s upozorněním na nový signup.
+            hint: Když je odeslán nový signup, Refinery pošle upozornení na Váš e-mail.
+            example: "Zadejte e-mailové adresy jako: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: Komu
+            from: Od
+            subject: Předmet
+            click_to_edit_subject: Klikněte zde pro editaci předmetu
+            explanation: Když Vás někdo kontaktuje přes vaše webové stránky, Refinery odešle e-mail s potvrzením o přijetí odesílateli signup.
+            below_edit_email_sent: Níže můžete upravit e-mail, který je odeslán.
+            the_customer_making_signup: Klient delá signup
+            message: Zpráva
+            note: "Poznámka: umístěte text %name%, pro určení pozice jména klienta v e-maile"
+      mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_signup: You just received a new signup on your website.
+          signup_starts: --- signup starts ---
+          signup_ends: --- signup ends ---
+          from: Od
+          email: E-mail
+          phone: Telefon
+          message: Zpráva
+          closing_line: S pozdravem
+          ps_html: P.S. Všechny vaše signups jsou uloženy pod záložkou "Signups" v Refinery, pokud by jste je chtěli zobrazit pozdeji.
+  activerecord:
+    models:
+      signup: Signup
+    attributes:
+      signup:
+        name: Name
+        email: Email address
+        contact_number: Contact number
+        language_instruction: Language instruction
+        inquiry: Inquiry
+        translation: Translation
+        coaching: Coaching
+        consultancy: Consultancy
+        question: Question
